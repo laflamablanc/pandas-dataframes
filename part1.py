@@ -1,6 +1,8 @@
 import csv
 
 outfile = open("student_name.csv", 'w')
+outfile_header = "First Name,Last Name\n"
+outfile.write(outfile_header)
 
 with open("Grades.csv", 'r') as infile:
     reader = csv.reader(infile, delimiter=",")
